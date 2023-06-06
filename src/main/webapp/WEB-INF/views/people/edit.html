@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать данные человека</title>
+</head>
+<body>
+<form th:method="PATCH" th:action="@{/people/{id}(id=${person.getId()})}" th:object="${person}">
+    <label for="name">Редактирование имени:</label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <div style="color: firebrick" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+    <br/>
+    <label for="email">Редактирвоание email:</label>
+    <input type="text" th:field="*{email}" id="email"/>
+    <div style="color: firebrick" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+    <br/>
+    <label for="address">Редактирование адреса:</label>
+    <input type="text" th:field="*{address}" id="address"/>
+    <div style="color: firebrick" th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></div>
+    <br/>
+    <label for="age">Редактирование возраста:</label>
+    <input type="text" th:field="*{age}" id="age"/>
+    <div style="color: firebrick" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></div>
+    </br>
+    <input type="submit" value="Обновить"/>
+</form>
+<br/>
+<hr/>
+<form th:action="@{/people/{id}(id=${person.getId()})}">
+    <input type="submit" value="Назад">
+</form>
+
+</body>
+</html>
