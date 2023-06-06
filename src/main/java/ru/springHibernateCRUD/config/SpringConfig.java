@@ -1,4 +1,4 @@
-package springHibernateCRUD.config;
+package ru.springHibernateCRUD.config;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package springHibernateCRUD.config;
+package ru.springHibernateCRUD.config;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
